@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch — Prodigy WD 02</title>
+  <link rel="stylesheet" href="style.css"/>
+  <meta name="description" content="A responsive stopwatch web app with start, pause, reset, and lap functionality built with HTML, CSS, and JavaScript."/>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Prodigy WD — Stopwatch</h1>
+  </header>
+
+  <main class="container">
+    <section class="timer-section">
+      <div class="display" id="display" aria-live="polite">00:00:00.000</div>
+      <div class="controls">
+        <button id="startBtn" class="btn btn-primary" aria-label="Start">Start</button>
+        <button id="pauseBtn" class="btn" aria-label="Pause" disabled>Pause</button>
+        <button id="lapBtn" class="btn" aria-label="Lap" disabled>Lap</button>
+        <button id="resetBtn" class="btn btn-ghost" aria-label="Reset" disabled>Reset</button>
+      </div>
+      <div class="meta">
+        <span>Elapsed Laps: <strong id="lapCount">0</strong></span>
+        <button id="clearLaps" class="link" aria-label="Clear laps" disabled>Clear laps</button>
+      </div>
+    </section>
+
+    <section class="laps-section">
+      <h2>Laps</h2>
+      <ol id="laps" class="laps" aria-live="polite"></ol>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Prodigy WD • Task 02</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
